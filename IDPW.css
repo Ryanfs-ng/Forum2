@@ -15,7 +15,8 @@ a{
     color: #9400D3
     rgb(148, 0, 211) ;
     font-weight: bolder;
-    text-decoration: none;    
+    text-decoration: none;
+    margin: 0px 0px 0px 0px;
 }
 
 h1{
@@ -73,10 +74,14 @@ h1{
 }
 
 .logo-link{
-    text-decoration: none; 
-    color: #fff;
-    font-weight: lighter;
+    color: #919191;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    position: absolute;
+    top: 10px;
+    left: 460px;
 }
+
 
 /* para smartphones */
 @media screen and (max-width: 460px){
@@ -105,7 +110,7 @@ h1{
     }
 
     header .botao{
-        
+
         padding-top: 10px;
         height: 5vh;
         padding-left: 12px;
@@ -113,14 +118,14 @@ h1{
         display: flex;
         float: right;
         flex-wrap: wrap;
-        
+
     }
 
     header{
         display: flex;
         flex-wrap: wrap;
     }
-    
+
 }
 
 /* para tablets */
@@ -170,29 +175,36 @@ header{
 .navbar{
     display:flex;
     align-items: center;
+    margin-right: 10px;
 }
 
 .navegaçao{
     background-color: #52057b;
-    padding: 10px;
-    width: 30%;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    width: 25%;
     display: inline-block;
     border-radius: 5px;
     max-height: 80px;
+    margin-right: 5px;
     margin-right: 10px;
+    align-items: center;
 }
 
 .nav-list{
     list-style: none;
     overflow: hidden;
+    margin-right: 15px;
+    margin-inline-start: -15px;
+    line-height: 6px;
 }
 
 .nav-item a{
     float: left;
     display:block;
-    text-align: center;
-    margin-inline: 30px;
-    line-height: 0px;
+    text-align: left;
+    margin-right: 30px;
+    line-height: 6px;
     font-size: 20px;
     padding: 10px;
     color: #fff;
@@ -216,12 +228,12 @@ header{
     font-size: 60px;
     display:inline-block;
     margin-right: 10px;
-    color: #fff;
+    color: #919191;
     cursor: pointer;
-}  
+}
 
 
-/* ******* tipos de fonte ********** */ 
+/* ******* tipos de fonte ********** */
 
 /*
 @font-face{
@@ -260,7 +272,7 @@ header{
         max-height: auto;
         width: 95%;
     }
-    
+
     .nav-item a{
         float: left;
         display:inline;
@@ -269,21 +281,21 @@ header{
         line-height: 10px;
         font-size: 15px;
         padding: 3px;
-    
+
     }
 
     .nav-list .close-icon i{
         font-size: 25px;
         float: left;
     }
-    
+
     .bar-icon {
         font-size: 30px;
         display:inline-block;
         margin-right: 10px;
         color: #fff;
         cursor: pointer;
-    }  
+    }
 
     .logo{
         font-size: 55px;
@@ -298,7 +310,7 @@ header{
         max-height: auto;
         width: 35%;
     }
-    
+
     .nav-item a{
         float:left;
         display:inline;
@@ -307,21 +319,21 @@ header{
         line-height: 10px;
         font-size: 20px;
         padding: 3px;
-    
+
     }
 
     .nav-list .close-icon i{
         font-size: 25px;
         padding-right: 3px;
     }
-    
+
     .bar-icon {
         font-size: 30px;
         display:inline-block;
         margin-right: 10px;
         color: #fff;
         cursor: pointer;
-    }  
+    }
 
     .logo{
         font-size: 60px;
@@ -342,16 +354,31 @@ header{
 
 .caixa-pesquisa select{
     padding: 10px;
+    background-color: #292B2E;
+    border-color: #292B2E;
+    color: white;
+    border-radius: 5px;
 }
 
-.caixa-pesquisa input{ 
-    padding: 10px;
+.caixa-pesquisa input{
+    padding: 12px;
+    background-color: #292B2E;
+    border-color: #292B2E;
+    color: white;
+    border-radius: 5px;
+    border: 10px;
+}
+
+.caixa-pesquisa input:focus {
+  outline: 2px solid #520557;
 }
 
 .caixa-pesquisa button{
-    padding: 10px;
-    background-color: #fff;
-    color: #000000;
+    padding: 12px;
+    background-color: #292B2E;
+    color: white;
+    border-radius: 5px;
+    border: none;
 }
 
 .caixa-pesquisa button:hover{
@@ -360,6 +387,61 @@ header{
     box-shadow: 1px 2px 3px #52057b;
 }
 
+.qualquer-coisa {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+
+.qualquer-coisa {
+  display: none;
+}
+
+.qualquer-coisa::after {
+  content: '\25BC'; /* Ícone de seta para baixo */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.qualquer-coisa + .qualquer-coisa::after {
+  content: '\25B2'; /* Ícone de seta para cima quando o select está aberto */
+}
+
+.qualquer-coisa:focus + .qualquer-coisa::after {
+  content: '\25BC'; /* Retorna para o ícone de seta para baixo ao focar */
+}
+
+.qualquer-coisa ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 1;
+}
+
+.qualquer-coisa:focus + .custom-select ul {
+  display: block;
+}
+
+.qualquer-coisa ul li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.qualquer-coisa ul li:hover {
+  background-color: #f0f0f0;
+}
 @media screen and (max-width: 460px){
     .caixa-pesquisa input, .caixa-pesquisa button, .caixa-pesquisa select{
         min-width: 300px;
@@ -475,13 +557,16 @@ footer{
 /* Navegação */
 
 .navegaçao{
+    margin-right: 5px;
     margin-block: 20px;
     font-weight: lighter;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .navegaçao a{
     color: #fff;
+    margin-right: 0px;
+    display: inline-block;
 }
 
 navegaçao a:hover{
@@ -571,7 +656,7 @@ navegaçao a:hover{
 
 .comentarios-container{
     margin-top: 50px;
-    
+
 }
 
 /* Sobre.detail */
