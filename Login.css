@@ -20,7 +20,7 @@ body{
 a{
     color: #b8b5b5;
     font-weight: bolder;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
 .LR a{
@@ -46,7 +46,7 @@ header{
 @media screen and (max-width: 460px){
     header{
         display: flex;
-        margin: 10px;  
+        margin: 10px;
         font-size: 0.9em;
     }
 
@@ -71,7 +71,11 @@ header .logo{
     display: inline-flex;
     font-size: 50px;
     justify-content: space-between;
-    font-family: 'EXEPixelPerfect';   
+    font-family: 'EXEPixelPerfect';
+}
+
+.caixa-pesquisa input{
+    border: #b8b5b5;
 }
 
 @font-face{
@@ -126,11 +130,11 @@ header .logo{
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
-} 
+}
 
 .container button.hidden{
     background-color: transparent;
-    border-color: rgb(27, 26, 26);
+    border-color: white;
 }
 
 .container form{
@@ -144,15 +148,26 @@ header .logo{
 }
 
 .container input{
-    background-color: #eee;
-    border: none;
+    background-color: rgb(27, 26, 26);
+    color: white;
+    border: solid;
+    border-top: rgb(81, 45, 168);
+    border-left: rgb(81, 45, 168);
+    border-color: rgb(81, 45, 168);
     margin: 8px 0;
     padding: 10px 15px;
     font-size: 13px;
     border-radius: 8px;
     width: 100%;
     outline: none;
+    transition: border-color 0.3s;
 }
+
+.container input:focus {
+  outline: 2px solid #6a0994;
+  border-color: #6a0994;
+}
+
 
 .form-container{
     position: absolute;
@@ -210,6 +225,10 @@ header .logo{
     margin: 0 3px;
     width: 40px;
     height: 40px;
+}
+
+.social-icons a:hover {
+  border-color: rgb(81, 45, 168); /* Cor da borda ao passar o cursor */
 }
 
 /* Segunda metade do Login */
@@ -328,7 +347,7 @@ input {
     display: inline-block;
     width: 10px;
     height: 10px;
-    
+
 }
 
 .checkbox {
