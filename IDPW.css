@@ -46,6 +46,10 @@ h1{
     margin-block: 0;
 }
 
+.subforum-descriçao a{
+    font-size: 1.1em;
+}
+
 .subforum-row{
     display: grid;
     grid-template-columns: 10% 60% 10% 20%;
