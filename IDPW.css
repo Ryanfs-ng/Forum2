@@ -74,12 +74,15 @@ h1{
 }
 
 .logo-link{
+    /* font-family: Arial, Helvetica, sans-serif; 
     color: #919191;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 70px;
     position: absolute;
     top: 10px;
-    left: 460px;
+    left: 460px; */
+    text-decoration: none; 
+    color: #fff;
+    font-weight: lighter;
 }
 
 
@@ -192,10 +195,12 @@ header{
 }
 
 .nav-list{
+    display: flex;
+    justify-content: space-between;
     list-style: none;
     overflow: hidden;
-    margin-right: 15px;
-    margin-inline-start: -15px;
+    margin-right: 30px;
+    margin-inline-start: 5px;
     line-height: 6px;
 }
 
@@ -203,10 +208,10 @@ header{
     float: left;
     display:block;
     text-align: left;
-    margin-right: 30px;
+    margin-right: 10px;
     line-height: 6px;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 22px;
+    padding: 10px 25px 0px 0px;
     color: #fff;
 }
 
@@ -285,8 +290,13 @@ header{
     }
 
     .nav-list .close-icon i{
-        font-size: 25px;
+        font-size: 20px;
         float: left;
+    }
+
+    .nav-list{
+        display: flex;
+        justify-content: space-between;
     }
 
     .bar-icon {
