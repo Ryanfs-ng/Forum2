@@ -56,6 +56,24 @@
             <span><a href="index.html">Fórum IDPW - Fóruns</a> >> <a href="posts.html"> Python </a> >> <a href="#"> Postagem</a></span>
         </div>
 
+        <div class="postagem-criado">
+            <span class="titulo-postagem">
+                Vale a pena aprender python em 2024?
+            </span>
+            <div class="descriçao-postagem">
+                Recentemente estava atrás de linguagens de programação interessantes e de alto valor 
+                no mercado de trabalho, por isso surgiu a dúvida e queria ajuda em relação a isso... 
+                Ainda vale a pena estudar tal linguagem? E se não, qual linguagem seria boa atualmente?
+            </div>
+        </div>
+        <div class="comentario-topic">
+            <button onclick="mostrarComentarioTopic()">Comentar</button>
+            <div class="area-comentario-topic esconder" id="area-comentario-topic">
+                <textarea name="comentario" id="" placeholder="Comente aqui..."></textarea>
+                <input type="submit" name="" id="" value="Enviar">
+            </div>
+        </div>
+        
         <div class="topico-container">
             <div class="head">
                 <div class="autores">Autor</div>
@@ -79,7 +97,7 @@
                     <hr>
                     Username
                     <div class="comentario">
-                        <button onclick="mostrarComentario()">Comentar</button>
+                        <button onclick="mostrarComentario()">Responder</button>
                     </div>
                 </div>
 
@@ -124,7 +142,7 @@
 
         <!--Resposta input-->
         <div class="area-comentario esconder" id="area-resposta">
-            <textarea name="comentario" id="" placeholder="responda aqui..."></textarea>
+            <textarea name="comentario" id="" placeholder="Responda aqui..."></textarea>
             <input type="submit" name="" id="" value="Enviar">
         </div>
     </div>

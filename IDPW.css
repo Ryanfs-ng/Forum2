@@ -608,13 +608,34 @@ navegaçao a:hover{
 
 /* discussão.html */
 
-.head{
+.head {
     display:flex;
     background-color: #2c2c2c;
     padding: 5px;
     font-weight: bold;
     font-size: 15px;
+}
 
+.postagem-criado{
+    width: 50%;
+    margin-bottom: 35px;
+}
+
+.titulo-postagem{
+    display:block;
+    background-color: #2c2c2c;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.descriçao-postagem{
+    display: inline-block;
+    background-color: #131415;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 0px 0px 5px 5px;
 }
 
 .autores{
@@ -645,12 +666,25 @@ navegaçao a:hover{
     border: none;
     padding: 10px;
     font-weight: bolder;
-    box-shadow: 4px 6px #fff;
+    box-shadow: 4px 6px rgb(100, 97, 97);
+    border-radius: 5px;
     cursor: pointer;
     float: right;
 }
 
+.comentario-topic button{
+    border: none;
+    padding: 10px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 4px 6px rgb(100, 97, 97);
+    cursor: pointer;
+}
+
 /* Comentarios */
+
+
 .area-comentario{
     margin-top: 50px;
 
@@ -663,11 +697,36 @@ navegaçao a:hover{
     margin-block: 10px;
 }
 
+.area-comentario-topic textarea{
+    width: 50%;
+    min-height: 100px;
+    padding: 10px;
+    margin-block: 10px;
+}
+
+.area-comentario-topic textarea:focus{
+    border-style: none;
+}
+
 .area-comentario input{
     float: right;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.area-comentario-topic input{
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.area-comentario-topic input{
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+
 }
 
 .area-comentario input:hover{

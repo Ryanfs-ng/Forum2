@@ -23,6 +23,11 @@ function mostrarComentario(){
     Areacomentario.setAttribute("style", "display:block;");
 }
 
+function mostrarComentarioTopic(){
+    var Areacomentario = document.getElementById("area-comentario-topic");
+    Areacomentario.setAttribute("style", "display:block;");
+}
+
 function mostrarResposta(){
     var Arearesposta = document.getElementById("area-resposta");
     Arearesposta.setAttribute("style", "display:block;");
