@@ -25,6 +25,7 @@ const usuarios = [
 
 let botao = document.getElementById('btnLogar')
 
+
 botao.addEventListener('click', function logar(){
     let getUsuario = document.getElementById('usuario').value
     let getSenha = document.getElementById('senha-user').value
@@ -41,9 +42,26 @@ botao.addEventListener('click', function logar(){
     }
 
     if(validaLogin == true){
-        alert('ok')
-    } else {
-        alert ('erro')
+        function alert(){
+            Swal.fire({
+                title: "Sucesso ao logar!",
+                text: "Clique em ok para retornar ao site",
+                icon: "success"
+            });
+        }
+        alert();  
+        event.preventDefault()
+ 
+    }else {
+    event.preventDefault()
+    function alert(){
+        Swal.fire({
+            title: "Falha no login",
+            text: "Insira os dados cadastrados corretamente",
+            icon: "error"
+          });
+    }
+    alert();
     }
 })
 
