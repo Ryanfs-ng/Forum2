@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+
 }
 
 html {
@@ -9,7 +10,12 @@ html {
     font-family: 'Titillium Web', sans-serif;
     background-color: rgb(0,0,0);
     color: #fefefe;
+    
 }
+
+body, html {
+    overflow-x: hidden !important;
+  }
 
 a{
     color: #9400D3
@@ -365,11 +371,13 @@ header{
 
 .caixa-pesquisa{
     border: solid 1px #52057b;
+    margin-right: 15px;
     margin-top: 20px;
     padding: 40px;
     display: flex;
     justify-content: center;
     box-shadow: 1px 2px 3px #52057b;
+    overflow: hidden;
 }
 
 .caixa-pesquisa select{
