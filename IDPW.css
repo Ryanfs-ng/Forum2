@@ -582,6 +582,23 @@ footer{
     opacity:0.5;
 }
 
+.paginaçao-vaga{
+    margin-top: 100px;
+    padding: 20px;
+    font-size: 15px;
+}
+
+.paginaçao-vaga a{
+    color: #fff;
+    margin-inline: 5px;
+    padding: 5px 10px;
+    border: solid 0.5px #fff;
+}
+
+.paginaçao-vaga a:hover{
+    opacity:0.5;
+}
+
 /* Navegação */
 
 .navegaçao{
@@ -819,4 +836,11 @@ hr{
 }
 .botao-login a{
     color: #fff;
+}
+
+.icon-user{
+    position: absolute;
+    left: 95%;
+    font-size: 30px;
+    cursor: pointer;
 }

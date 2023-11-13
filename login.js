@@ -42,17 +42,26 @@ botao.addEventListener('click', function logar(){
     }
 
     if(validaLogin == true){
-        function alert(){
+        function alerta(){
             Swal.fire({
                 title: "Sucesso ao logar!",
                 text: "Clique em ok para retornar ao site",
                 icon: "success"
-            });
-        }
-        alert();  
+            }
+        ).then((result) =>{
+           if(result.isConfirmed){
+            location.href = "index2.html"
+           }
+        });
+    }
+        alerta();  
         event.preventDefault()
  
-    }else {
+    }
+    
+    
+    
+    else {
     event.preventDefault()
     function alert(){
         Swal.fire({
