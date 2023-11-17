@@ -43,22 +43,24 @@
         <!--Caixa de pesquisa-->
         <div class="caixa-pesquisa">
             <div>        
-                <script src="novapostagem.js"></script>
-                  <select name="" id="">
-                      <option value="titulos">Titulos</option>
-                      <option value="descriçoes">Feedback</option>
+                  <select id="category-select" onchange="mostrarConteudo()">
+                      <option value="selecionar" selected disabled>Selecionar Categoria</option>
+                      <option value="linguagens de programaçao">Linguagens de Programação</option>
+                      <option value="frameworks">Frameworks</option>
+                      <option value="github/git">Github/Git</option>
                   </select>
-                  <input type="text" name="q" id="" placeholder="pesquisa ...">
+                  <input type="text" id="search-input" onInput="filtrarConteudo()" placeholder="pesquisa ...">
                   <button><i class="fa fa-search"></i> </button>
               </div>
           </div>
     </header>
 
     <div class="container">
+    <section id="linguagens de programaçao" class="category-content">   
         <div class="subforum">
-            <div class="subforum-titulo">
-                <h1>Linguagens de programação</h1>
-            </div>
+                <div class="subforum-titulo">
+                    <h1>Linguagens de programação</h1>
+                </div>
             <div class="subforum-row">
                 <div class="subforum-icone subforum-coluna center">
                     <i class="computador">
@@ -79,7 +81,6 @@
                     <br>
                     em <small>10 Mar 2023</small>
                 </div>
-
             </div>
         </div>
 
@@ -208,13 +209,14 @@
                 <br>
                 em <small>10 Mar 2023</small>
             </div>
-
         </div>
+    </section>        
         <!--Mais conteudo-->
         <div class="subforum">
-            <div class="subforum-titulo">
-                <h1>Frameworks</h1>
-            </div>
+    <section id="frameworks" class="category-content">
+                <div class="subforum-titulo">
+                    <h1>Frameworks</h1>
+                </div>
             <div class="subforum-row">
                 <div class="subforum-icone subforum-coluna center">
                     <i class="computador">
@@ -239,7 +241,6 @@
                 </div>
 
             </div>
-        </div>
 
         <hr class="subforum-divisor">
         <div class="subforum-row">
@@ -311,7 +312,7 @@
                 <span> 0 Postagens | 0 Topicos </span>
             </div>
             <div class="subforum-info subforum-coluna">
-                <b><a href="">Última postagem</a></b> por <a href=""> ? </a>
+                <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário  </a>
                 <br>
                 em <small>?</small>
             </div>
@@ -337,13 +338,13 @@
                 <span> 0 Postagens | 0 Topicos </span>
             </div>
             <div class="subforum-info subforum-coluna">
-                <b><a href="">Última postagem</a></b> por <a href=""> ? </a>
+                <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário  </a>
                 <br>
                 em <small>?</small>
             </div>
-
+    </section>
         </div>
-
+    <section id="github/git" class="category-content">      
         <div class="subforum">
             <div class="subforum-titulo">
                 <h1>Github/Git</h1>
@@ -374,7 +375,7 @@
                 </div>
     
             </div>
-
+         
             <div class="subforum-row">
                 <div class="subforum-icone subforum-coluna center">
                     <i class="computador">
@@ -399,7 +400,7 @@
                     <br>
                     em <small>10 Mar 2023</small>
                 </div>
-    
+    </section>            
             </div>
         </div>
     </div>

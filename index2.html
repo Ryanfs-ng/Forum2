@@ -44,326 +44,60 @@
         <!--Caixa de pesquisa-->
         <div class="caixa-pesquisa">
             <div>        
-                <script src="novapostagem.js"></script>
-                  <select name="" id="">
-                      <option value="titulos">Titulos</option>
-                      <option value="descriçoes">Feedback</option>
-                  </select>
-                  <input type="text" name="q" id="" placeholder="pesquisa ...">
+                <select id="category-select" onchange="mostrarConteudo()">
+                    <option value="selecionar" selected disabled>Selecionar Categoria</option>
+                    <option value="linguagens de programaçao">Linguagens de Programação</option>
+                    <option value="frameworks">Frameworks</option>
+                    <option value="github/git">Github/Git</option>
+                </select>
+                <input type="text" id="search-input" onInput="filtrarConteudo()" placeholder="pesquisa ...">
                   <button><i class="fa fa-search"></i> </button>
               </div>
           </div>
     </header>
 
     <div class="container">
-        <div class="subforum">
-            <div class="subforum-titulo">
-                <h1>Linguagens de programação</h1>
+        <section id="linguagens de programaçao" class="category-content">   
+            <div class="subforum">
+                    <div class="subforum-titulo">
+                        <h1>Linguagens de programação</h1>
+                    </div>
+                <div class="subforum-row">
+                    <div class="subforum-icone subforum-coluna center">
+                        <i class="computador">
+                            <!--<img src="img/computador logo.png"> -->
+                            <img class="center" src="img/python.png">
+                        </i>
+                    </div>
+                    <div class="subforum-descriçao subforum-coluna ">
+                        <h1><a href="posts.html"> Python </a></h1>
+                        <p> Python é uma linguagem de programação de alto nível conhecida por sua simplicidade e 
+                            legibilidade, amplamente utilizada para desenvolvimento web, científico e automação.</p>
+                    </div>
+                    <div class="subforum-status subforum-coluna center">
+                        <span> 2 Postagens | 5 Topicos </span>
+                    </div>
+                    <div class="subforum-info subforum-coluna">
+                        <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
+                        <br>
+                        em <small>10 Mar 2023</small>
+                    </div>
+                </div>
             </div>
+    
+            <hr class="subforum-divisor">
             <div class="subforum-row">
                 <div class="subforum-icone subforum-coluna center">
                     <i class="computador">
                         <!--<img src="img/computador logo.png"> -->
-                        <img class="center" src="img/python.png">
+                        <img class="center" src="img/JavaScript.png">
                     </i>
                 </div>
                 <div class="subforum-descriçao subforum-coluna ">
-                    <h1><a href="posts.html"> Python </a></h1>
-                    <p> Python é uma linguagem de programação de alto nível conhecida por sua simplicidade e 
-                        legibilidade, amplamente utilizada para desenvolvimento web, científico e automação.</p>
-                </div>
-                <div class="subforum-status subforum-coluna center">
-                    <span> 2 Postagens | 5 Topicos </span>
-                </div>
-                <div class="subforum-info subforum-coluna">
-                    <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
-                    <br>
-                    em <small>10 Mar 2023</small>
-                </div>
-
-            </div>
-        </div>
-
-        <hr class="subforum-divisor">
-        <div class="subforum-row">
-            <div class="subforum-icone subforum-coluna center">
-                <i class="computador">
-                    <!--<img src="img/computador logo.png"> -->
-                    <img class="center" src="img/JavaScript.png">
-                </i>
-            </div>
-            <div class="subforum-descriçao subforum-coluna ">
-                <h1><a href="posts-vagos.html"> JavaScript</a></h1>
-                <p> JavaScript é uma linguagem de programação de alto nível amplamente usada para adicionar 
-                    interatividade e funcionalidades dinâmicas a páginas da web. 
-                    É executada no navegador do cliente e permite a criação de aplicativos web interativos.</p>
-            </div>
-            <div class="subforum-status subforum-coluna center">
-                <span> 0 Postagens | 0 Topicos </span>
-            </div>
-            <div class="subforum-info subforum-coluna">
-                <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
-                <br>
-                em <small>10 Mar 2023</small>
-            </div>
-
-        </div>
-
-        <hr class="subforum-divisor">
-        <div class="subforum-row">
-            <div class="subforum-icone subforum-coluna center">
-                <i class="computador">
-                    <!--<img src="img/computador logo.png"> -->
-                    <img class="center" src="img/C sharp.png"> 
-                </i>
-            </div>
-            <div class="subforum-descriçao subforum-coluna ">
-                <h1><a href="posts-vagos.html"> C# </a></h1>
-                <p> C# é uma linguagem de programação orientada a objetos desenvolvida pela Microsoft, 
-                    amplamente usada para criar aplicativos Windows, jogos e aplicativos web no 
-                    ecossistema .NET. Ela combina a facilidade de uso com recursos avançados de 
-                    programação.</p>
-            </div>
-            <div class="subforum-status subforum-coluna center">
-                <span> 0 Postagens | 0 Topicos </span>
-            </div>
-            <div class="subforum-info subforum-coluna">
-                <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
-                <br>
-                em <small>10 Mar 2023</small>
-            </div>
-
-        </div>
-
-        <hr class="subforum-divisor">
-        <div class="subforum-row">
-            <div class="subforum-icone subforum-coluna center">
-                <i class="computador">
-                    <!--<img src="img/computador logo.png"> -->
-                    <img class="center" src="img/C++.png">
-                </i>
-            </div>
-            <div class="subforum-descriçao subforum-coluna ">
-                <h1><a href="posts-vagos.html"> C++</a></h1>
-                <p> C++ é uma extensão da linguagem C, com suporte a programação orientada
-                     a objetos e recursos avançados de gerenciamento de memória.usada para
-                      desenvolver aplicativos de sistemas, jogos, software embarcado e 
-                      aplicativos de alto desempenho. </p>
-            </div>
-            <div class="subforum-status subforum-coluna center">
-                <span> 0 Postagens | 0 Topicos </span>
-            </div>
-            <div class="subforum-info subforum-coluna">
-                <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
-                <br>
-                em <small>10 Mar 2023</small>
-            </div>
-
-        </div>
-
-        <hr class="subforum-divisor">
-        <div class="subforum-row">
-            <div class="subforum-icone subforum-coluna center">
-                <i class="computador">
-                    <!--<img src="img/computador logo.png"> -->
-                    <img class="center" src="img/C.png">
-                </i>
-            </div>
-            <div class="subforum-descriçao subforum-coluna ">
-                <h1><a href="posts-vagos.html"> C </a></h1>
-                <p> C é uma linguagem de programação de alto nível e baixo nível, 
-                    conhecida por sua eficiência e controle direto sobre o hardware. 
-                    Ela é amplamente usada para desenvolver sistemas operacionais, 
-                    aplicativos de sistemas e software de baixo nível.</p>
-            </div>
-            <div class="subforum-status subforum-coluna center">
-                <span> 0 Postagens | 0 Topicos </span>
-            </div>
-            <div class="subforum-info subforum-coluna">
-                <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
-                <br>
-                em <small>10 Mar 2023</small>
-            </div>
-
-        </div>
-
-        <hr class="subforum-divisor">
-        <div class="subforum-row">
-            <div class="subforum-icone subforum-coluna center">
-                <i class="computador">
-                    <!--<img src="img/computador logo.png"> -->
-                    <img class="center" src="img/java.png">
-                </i>
-            </div>
-            <div class="subforum-descriçao subforum-coluna ">
-                <h1><a href="posts-vagos.html"> Java </a></h1>
-                <p> Java é uma linguagem de programação versátil e orientada a objetos 
-                    usada em aplicativos web, móveis e sistemas empresariais. 
-                    Sua portabilidade e segurança são características distintivas.</p>
-            </div>
-            <div class="subforum-status subforum-coluna center">
-                <span> 0 Postagens | 0 Topicos </span>
-            </div>
-            <div class="subforum-info subforum-coluna">
-                <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
-                <br>
-                em <small>10 Mar 2023</small>
-            </div>
-
-        </div>
-        <!--Mais conteudo-->
-        <div class="subforum">
-            <div class="subforum-titulo">
-                <h1>Frameworks</h1>
-            </div>
-            <div class="subforum-row">
-                <div class="subforum-icone subforum-coluna center">
-                    <i class="computador">
-                        <!--<img src="img/computador logo.png"> -->
-                        <img class="center" src="img/React.png">
-                    </i>
-                </div>
-                <div class="subforum-descriçao subforum-coluna ">
-                    <h1><a href="posts-vagos.html"> React </a></h1>
-                    <p> O React é um popular framework JavaScript para construir 
-                        interfaces de usuário interativas e dinâmicas. Permite a criação de componentes reutilizáveis
-                         que atualizam automaticamente quando os dados subjacentes mudam. 
-                         </p>
-                </div>
-                <div class="subforum-status subforum-coluna center">
-                    <span> 0 Postagens | 0 Topicos </span>
-                </div>
-                <div class="subforum-info subforum-coluna">
-                    <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
-                    <br>
-                    em <small>10 Mar 2023</small>
-                </div>
-
-            </div>
-        </div>
-
-        <hr class="subforum-divisor">
-        <div class="subforum-row">
-            <div class="subforum-icone subforum-coluna center">
-                <i class="computador">
-                    <!--<img src="img/computador logo.png"> -->
-                    <img class="center" src="img/Vue js 2.png">
-                </i>
-            </div>
-            <div class="subforum-descriçao subforum-coluna ">
-                <h1><a href="posts-vagos.html"> Vue.js</a></h1>
-                <p> O Vue.js é um framework JavaScript progressivo usado para construir 
-                    interfaces de usuário interativas e reativas. Ele se destaca por sua 
-                    simplicidade e facilidade de integração com projetos existentes. 
-                    </p>
-            </div>
-            <div class="subforum-status subforum-coluna center">
-                <span> 0 Postagens | 0 Topicos </span>
-            </div>
-            <div class="subforum-info subforum-coluna">
-                <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
-                <br>
-                em <small>10 Mar 2023</small>
-            </div>
-
-        </div>
-
-        <hr class="subforum-divisor">
-        <div class="subforum-row">
-            <div class="subforum-icone subforum-coluna center">
-                <i class="computador">
-                    <!--<img src="img/computador logo.png"> -->
-                    <img class="center" src="img/Django.png">
-                </i>
-            </div>
-            <div class="subforum-descriçao subforum-coluna ">
-                <h1><a href="posts-vagos.html"> Django </a></h1>
-                <p> Django é um framework Python que simplifica o desenvolvimento de 
-                    aplicativos web, oferecendo recursos como ORM e administração 
-                    integrada. É conhecido por sua segurança e escalabilidade.</p>
-            </div>
-            <div class="subforum-status subforum-coluna center">
-                <span>0 Postagens | 0 Topicos </span>
-            </div>
-            <div class="subforum-info subforum-coluna">
-                <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
-                <br>
-                em <small>10 Mar 2023</small>
-            </div>
-
-        </div>
-
-        <hr class="subforum-divisor">
-        <div class="subforum-row">
-            <div class="subforum-icone subforum-coluna center">
-                <i class="computador">
-                    <!--<img src="img/computador logo.png"> -->
-                    <img class="center" src="img/Angular.png">
-                </i>
-            </div>
-            <div class="subforum-descriçao subforum-coluna ">
-                <h1><a href="posts-vagos.html"> Angular </a></h1>
-                <p> Angular é um framework JavaScript mantido pelo Google para o 
-                    desenvolvimento de aplicativos web e móveis. Ele oferece uma 
-                    estrutura robusta para criar interfaces de usuário dinâmicas e é 
-                    conhecido por seu suporte a componentes e injeção de dependências.</p>
-            </div>
-            <div class="subforum-status subforum-coluna center">
-                <span> 0 Postagens | 0 Topicos </span>
-            </div>
-            <div class="subforum-info subforum-coluna">
-                <b><a href="">Última postagem</a></b> por <a href=""> ? </a>
-                <br>
-                em <small>?</small>
-            </div>
-
-        </div>
-
-        <hr class="subforum-divisor">
-        <div class="subforum-row">
-            <div class="subforum-icone subforum-coluna center">
-                <i class="computador">
-                    <!--<img src="img/computador logo.png"> -->
-                    <img class="center" src="img/Express.png">
-                </i>
-            </div>
-            <div class="subforum-descriçao subforum-coluna ">
-                <h1><a href="posts-vagos.html"> Express </a></h1>
-                <p> Express é um framework Node.js minimalista e flexível para desenvolver
-                     aplicativos web e APIs de forma rápida e eficiente. Ele simplifica o 
-                     manuseio de rotas e solicitações HTTP, sendo amplamente utilizado no 
-                     desenvolvimento de servidores web em JavaScript.</p>
-            </div>
-            <div class="subforum-status subforum-coluna center">
-                <span> 0 Postagens | 0 Topicos </span>
-            </div>
-            <div class="subforum-info subforum-coluna">
-                <b><a href="">Última postagem</a></b> por <a href=""> ? </a>
-                <br>
-                em <small>?</small>
-            </div>
-
-        </div>
-
-        <div class="subforum">
-            <div class="subforum-titulo">
-                <h1>Github/Git</h1>
-            </div>
-            <div class="subforum-row">
-                <div class="subforum-icone subforum-coluna center">
-                    <i class="computador">
-                        <!--<img src="img/computador logo.png"> -->
-                        <img class="center" src="img/Github.png">
-                    </i>
-                </div>
-                <div class="subforum-descriçao subforum-coluna ">
-                    <h1><a href="posts-vagos.html"> Github </a></h1>
-                    <p> GitHub é uma plataforma de hospedagem e colaboração de código 
-                        que permite aos desenvolvedores compartilhar, colaborar e 
-                        controlar o versionamento de projetos de software. 
-                        É amplamente utilizado para gerenciamento de código-fonte e 
-                        colaboração em projetos de código aberto e privados. 
-                         </p>
+                    <h1><a href="posts-vagos.html"> JavaScript</a></h1>
+                    <p> JavaScript é uma linguagem de programação de alto nível amplamente usada para adicionar 
+                        interatividade e funcionalidades dinâmicas a páginas da web. 
+                        É executada no navegador do cliente e permite a criação de aplicativos web interativos.</p>
                 </div>
                 <div class="subforum-status subforum-coluna center">
                     <span> 0 Postagens | 0 Topicos </span>
@@ -375,22 +109,21 @@
                 </div>
     
             </div>
-
+    
+            <hr class="subforum-divisor">
             <div class="subforum-row">
                 <div class="subforum-icone subforum-coluna center">
                     <i class="computador">
                         <!--<img src="img/computador logo.png"> -->
-                        <img class="center" src="img/git.png">
+                        <img class="center" src="img/C sharp.png"> 
                     </i>
                 </div>
                 <div class="subforum-descriçao subforum-coluna ">
-                    <h1><a href="posts-vagos.html"> Git</a></h1>
-                    <p> Git é um sistema de controle de versão distribuído amplamente 
-                        utilizado para rastrear alterações em código-fonte. Ele permite 
-                        que os desenvolvedores colaborem, controlem o histórico de 
-                        alterações e revertam para versões anteriores de projetos de 
-                        software.
-                         </p>
+                    <h1><a href="posts-vagos.html"> C# </a></h1>
+                    <p> C# é uma linguagem de programação orientada a objetos desenvolvida pela Microsoft, 
+                        amplamente usada para criar aplicativos Windows, jogos e aplicativos web no 
+                        ecossistema .NET. Ela combina a facilidade de uso com recursos avançados de 
+                        programação.</p>
                 </div>
                 <div class="subforum-status subforum-coluna center">
                     <span> 0 Postagens | 0 Topicos </span>
@@ -402,8 +135,276 @@
                 </div>
     
             </div>
+    
+            <hr class="subforum-divisor">
+            <div class="subforum-row">
+                <div class="subforum-icone subforum-coluna center">
+                    <i class="computador">
+                        <!--<img src="img/computador logo.png"> -->
+                        <img class="center" src="img/C++.png">
+                    </i>
+                </div>
+                <div class="subforum-descriçao subforum-coluna ">
+                    <h1><a href="posts-vagos.html"> C++</a></h1>
+                    <p> C++ é uma extensão da linguagem C, com suporte a programação orientada
+                         a objetos e recursos avançados de gerenciamento de memória.usada para
+                          desenvolver aplicativos de sistemas, jogos, software embarcado e 
+                          aplicativos de alto desempenho. </p>
+                </div>
+                <div class="subforum-status subforum-coluna center">
+                    <span> 0 Postagens | 0 Topicos </span>
+                </div>
+                <div class="subforum-info subforum-coluna">
+                    <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
+                    <br>
+                    em <small>10 Mar 2023</small>
+                </div>
+    
+            </div>
+    
+            <hr class="subforum-divisor">
+            <div class="subforum-row">
+                <div class="subforum-icone subforum-coluna center">
+                    <i class="computador">
+                        <!--<img src="img/computador logo.png"> -->
+                        <img class="center" src="img/C.png">
+                    </i>
+                </div>
+                <div class="subforum-descriçao subforum-coluna ">
+                    <h1><a href="posts-vagos.html"> C </a></h1>
+                    <p> C é uma linguagem de programação de alto nível e baixo nível, 
+                        conhecida por sua eficiência e controle direto sobre o hardware. 
+                        Ela é amplamente usada para desenvolver sistemas operacionais, 
+                        aplicativos de sistemas e software de baixo nível.</p>
+                </div>
+                <div class="subforum-status subforum-coluna center">
+                    <span> 0 Postagens | 0 Topicos </span>
+                </div>
+                <div class="subforum-info subforum-coluna">
+                    <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
+                    <br>
+                    em <small>10 Mar 2023</small>
+                </div>
+    
+            </div>
+    
+            <hr class="subforum-divisor">
+            <div class="subforum-row">
+                <div class="subforum-icone subforum-coluna center">
+                    <i class="computador">
+                        <!--<img src="img/computador logo.png"> -->
+                        <img class="center" src="img/java.png">
+                    </i>
+                </div>
+                <div class="subforum-descriçao subforum-coluna ">
+                    <h1><a href="posts-vagos.html"> Java </a></h1>
+                    <p> Java é uma linguagem de programação versátil e orientada a objetos 
+                        usada em aplicativos web, móveis e sistemas empresariais. 
+                        Sua portabilidade e segurança são características distintivas.</p>
+                </div>
+                <div class="subforum-status subforum-coluna center">
+                    <span> 0 Postagens | 0 Topicos </span>
+                </div>
+                <div class="subforum-info subforum-coluna">
+                    <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
+                    <br>
+                    em <small>10 Mar 2023</small>
+                </div>
+            </div>
+        </section>        
+            <!--Mais conteudo-->
+            <div class="subforum">
+        <section id="frameworks" class="category-content">
+                    <div class="subforum-titulo">
+                        <h1>Frameworks</h1>
+                    </div>
+                <div class="subforum-row">
+                    <div class="subforum-icone subforum-coluna center">
+                        <i class="computador">
+                            <!--<img src="img/computador logo.png"> -->
+                            <img class="center" src="img/React.png">
+                        </i>
+                    </div>
+                    <div class="subforum-descriçao subforum-coluna ">
+                        <h1><a href="posts-vagos.html"> React </a></h1>
+                        <p> O React é um popular framework JavaScript para construir 
+                            interfaces de usuário interativas e dinâmicas. Permite a criação de componentes reutilizáveis
+                             que atualizam automaticamente quando os dados subjacentes mudam. 
+                             </p>
+                    </div>
+                    <div class="subforum-status subforum-coluna center">
+                        <span> 0 Postagens | 0 Topicos </span>
+                    </div>
+                    <div class="subforum-info subforum-coluna">
+                        <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
+                        <br>
+                        em <small>10 Mar 2023</small>
+                    </div>
+    
+                </div>
+    
+            <hr class="subforum-divisor">
+            <div class="subforum-row">
+                <div class="subforum-icone subforum-coluna center">
+                    <i class="computador">
+                        <!--<img src="img/computador logo.png"> -->
+                        <img class="center" src="img/Vue js 2.png">
+                    </i>
+                </div>
+                <div class="subforum-descriçao subforum-coluna ">
+                    <h1><a href="posts-vagos.html"> Vue.js</a></h1>
+                    <p> O Vue.js é um framework JavaScript progressivo usado para construir 
+                        interfaces de usuário interativas e reativas. Ele se destaca por sua 
+                        simplicidade e facilidade de integração com projetos existentes. 
+                        </p>
+                </div>
+                <div class="subforum-status subforum-coluna center">
+                    <span> 0 Postagens | 0 Topicos </span>
+                </div>
+                <div class="subforum-info subforum-coluna">
+                    <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
+                    <br>
+                    em <small>10 Mar 2023</small>
+                </div>
+    
+            </div>
+    
+            <hr class="subforum-divisor">
+            <div class="subforum-row">
+                <div class="subforum-icone subforum-coluna center">
+                    <i class="computador">
+                        <!--<img src="img/computador logo.png"> -->
+                        <img class="center" src="img/Django.png">
+                    </i>
+                </div>
+                <div class="subforum-descriçao subforum-coluna ">
+                    <h1><a href="posts-vagos.html"> Django </a></h1>
+                    <p> Django é um framework Python que simplifica o desenvolvimento de 
+                        aplicativos web, oferecendo recursos como ORM e administração 
+                        integrada. É conhecido por sua segurança e escalabilidade.</p>
+                </div>
+                <div class="subforum-status subforum-coluna center">
+                    <span>0 Postagens | 0 Topicos </span>
+                </div>
+                <div class="subforum-info subforum-coluna">
+                    <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
+                    <br>
+                    em <small>10 Mar 2023</small>
+                </div>
+    
+            </div>
+    
+            <hr class="subforum-divisor">
+            <div class="subforum-row">
+                <div class="subforum-icone subforum-coluna center">
+                    <i class="computador">
+                        <!--<img src="img/computador logo.png"> -->
+                        <img class="center" src="img/Angular.png">
+                    </i>
+                </div>
+                <div class="subforum-descriçao subforum-coluna ">
+                    <h1><a href="posts-vagos.html"> Angular </a></h1>
+                    <p> Angular é um framework JavaScript mantido pelo Google para o 
+                        desenvolvimento de aplicativos web e móveis. Ele oferece uma 
+                        estrutura robusta para criar interfaces de usuário dinâmicas e é 
+                        conhecido por seu suporte a componentes e injeção de dependências.</p>
+                </div>
+                <div class="subforum-status subforum-coluna center">
+                    <span> 0 Postagens | 0 Topicos </span>
+                </div>
+                <div class="subforum-info subforum-coluna">
+                    <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário  </a>
+                    <br>
+                    em <small>?</small>
+                </div>
+    
+            </div>
+    
+            <hr class="subforum-divisor">
+            <div class="subforum-row">
+                <div class="subforum-icone subforum-coluna center">
+                    <i class="computador">
+                        <!--<img src="img/computador logo.png"> -->
+                        <img class="center" src="img/Express.png">
+                    </i>
+                </div>
+                <div class="subforum-descriçao subforum-coluna ">
+                    <h1><a href="posts-vagos.html"> Express </a></h1>
+                    <p> Express é um framework Node.js minimalista e flexível para desenvolver
+                         aplicativos web e APIs de forma rápida e eficiente. Ele simplifica o 
+                         manuseio de rotas e solicitações HTTP, sendo amplamente utilizado no 
+                         desenvolvimento de servidores web em JavaScript.</p>
+                </div>
+                <div class="subforum-status subforum-coluna center">
+                    <span> 0 Postagens | 0 Topicos </span>
+                </div>
+                <div class="subforum-info subforum-coluna">
+                    <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário  </a>
+                    <br>
+                    em <small>?</small>
+                </div>
+        </section>
+            </div>
+        <section id="github/git" class="category-content">      
+            <div class="subforum">
+                <div class="subforum-titulo">
+                    <h1>Github/Git</h1>
+                </div>
+                <div class="subforum-row">
+                    <div class="subforum-icone subforum-coluna center">
+                        <i class="computador">
+                            <!--<img src="img/computador logo.png"> -->
+                            <img class="center" src="img/Github.png">
+                        </i>
+                    </div>
+                    <div class="subforum-descriçao subforum-coluna ">
+                        <h1><a href="posts-vagos.html"> Github </a></h1>
+                        <p> GitHub é uma plataforma de hospedagem e colaboração de código 
+                            que permite aos desenvolvedores compartilhar, colaborar e 
+                            controlar o versionamento de projetos de software. 
+                            É amplamente utilizado para gerenciamento de código-fonte e 
+                            colaboração em projetos de código aberto e privados. 
+                             </p>
+                    </div>
+                    <div class="subforum-status subforum-coluna center">
+                        <span> 0 Postagens | 0 Topicos </span>
+                    </div>
+                    <div class="subforum-info subforum-coluna">
+                        <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
+                        <br>
+                        em <small>10 Mar 2023</small>
+                    </div>
+        
+                </div>
+             
+                <div class="subforum-row">
+                    <div class="subforum-icone subforum-coluna center">
+                        <i class="computador">
+                            <!--<img src="img/computador logo.png"> -->
+                            <img class="center" src="img/git.png">
+                        </i>
+                    </div>
+                    <div class="subforum-descriçao subforum-coluna ">
+                        <h1><a href="posts-vagos.html"> Git</a></h1>
+                        <p> Git é um sistema de controle de versão distribuído amplamente 
+                            utilizado para rastrear alterações em código-fonte. Ele permite 
+                            que os desenvolvedores colaborem, controlem o histórico de 
+                            alterações e revertam para versões anteriores de projetos de 
+                            software.
+                             </p>
+                    </div>
+                    <div class="subforum-status subforum-coluna center">
+                        <span> 0 Postagens | 0 Topicos </span>
+                    </div>
+                    <div class="subforum-info subforum-coluna">
+                        <b><a href="">Última postagem</a></b> por <a href=""> ApenasumUsuário </a>
+                        <br>
+                        em <small>10 Mar 2023</small>
+                    </div>
+        </section>            
+                </div>
+            </div>
         </div>
-    </div>
 
     <!--Mais conteudo-->
     <!--Informações do forum-->

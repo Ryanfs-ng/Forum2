@@ -1,6 +1,6 @@
 var buttonPress = function (){
     var com = document.getElementById('comments');
-    var filterWords = ["hitler", "crap", "brat"];
+    var filterWords = ["hitler", "porra", "caralho"];
     // "i" is to ignore case and "g" for global
     var rgx = new RegExp("("+filterWords.join("|")+")", "gi");
     com.value = com.value.replace(rgx, "**");
