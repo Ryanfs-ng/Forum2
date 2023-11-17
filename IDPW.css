@@ -535,32 +535,77 @@ footer{
 
 /* tabela */
 
-.table-row{
+#table-row{
     display: flex;
-
 }
 
-.table-row .status, .table-row .assunto-post, .table-row .respostas, .table-row .ultima-resposta{
+#table-row .status, #table-row .assunto-post, #table-row .respostas, #table-row .ultima-resposta{
     padding: 5px;
     margin: 2px;
     background-color: #131415;
 }
 
-.table-row .status{
+#assunto-post{
+    padding: 5px;
+    margin: 2px;
+    background-color: #131415;
+    flex: 70%;
+}
+
+.tabela-header #assunto-post{
+    flex: 70%;
+}
+
+#table-row .status{
     flex: 5%;
     font-size: 30px;
     text-align: center;
 }
 
-.table-row .assunto-post{
+#table-row .assunto-post{
     flex: 70%;
 }
 
-.table-row .respostas{
+#table-row .respostas{
     flex: 10%;
 }
 
-.table-row .ultima-resposta{
+#table-row .ultima-resposta{
+    flex: 15%;
+}
+
+
+.table-row2{
+    display: flex;
+
+}
+
+.table-row2 .status, .table-row2 .assunto-post, .table-row2 .respostas, .table-row2 .ultima-resposta{
+    padding: 5px;
+    margin: 2px;
+    background-color: #131415;
+}
+
+
+.tabela-header .assunto-post{
+    flex: 70%;
+}
+
+.table-row2 .status{
+    flex: 5%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.table-row2 .assunto-post{
+    flex: 70%;
+}
+
+.table-row2 .respostas{
+    flex: 10%;
+}
+
+.table-row2 .ultima-resposta{
     flex: 15%;
 }
 
@@ -661,6 +706,7 @@ navegaçao a:hover{
     padding: 10px;
     font-size: 1.2em;
     border-radius: 0px 0px 5px 5px;
+    width: 100%;
 }
 
 .autores{
