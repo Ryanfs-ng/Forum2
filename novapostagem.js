@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 });
 
+// Tópicos 
+
 function salvarPost() {
   // Obtém os valores do formulário
   var titulo = document.getElementById('titulo').value;
@@ -65,4 +67,51 @@ exibirPostagens();
 
 function criarPostagem(){
   salvarPost();
+}
+
+// Postagens
+
+function areaPost() {
+  // Obtém os valores do formulário
+  var comentario = document.getElementById('comentario').value;
+
+  var postagem = {
+    comentario: comentario
+};
+  var postagensSalvas = JSON.parse(localStorage.getItem('comentarios')) || [];
+             // Adiciona a nova postagem ao array de postagens
+  postagensSalvas.push(postagem);
+
+              // Salva o array atualizado no localStorage
+  localStorage.setItem('comentarios', JSON.stringify(postagensSalvas));
+  
+              // Atualiza a exibição das postagens
+  exibirPost();
+ }
+
+ function exibirPost() {
+  // Obtém as postagens salvas do localStorage
+  var postagensSalvas = JSON.parse(localStorage.getItem('comentarios')) || [];
+
+  // Obtém o elemento onde as postagens serão exibidas
+  var postagensDiv = document.getElementById('body');
+
+  // Limpa o conteúdo atual
+  postagensDiv.innerHTML = '';
+
+  // Itera sobre as postagens e as exibe
+  postagensSalvas.forEach(function(postagem) {
+      var postagemDiv = document.createElement('div');
+      postagemDiv.innerHTML = '<div id="body2"' + '<div class="autores">' + '<div class="OutroUsuario"><a href="#">ProfWeldes</a></div>' + 
+      '<div>Função</div>' + '<img src="https://cdn.pixabay.com/photo/2021/02/08/14/27/yoshi-5994957_1280.png">' + 
+      '<div> Posts: <u>45</u></div><hr>' + '</div>' + '<div class="conteudo">' + postagem.comentario + '<br></div>' + '<div class="quebra"> <hr> Username </div></div></div>' 
+      postagensDiv.appendChild(postagemDiv);
+  });
+}
+
+exibirPost();
+// Exibe as postagens ao carregar a página
+
+function criarPost(){
+  areaPost();
 }

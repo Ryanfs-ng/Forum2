@@ -69,3 +69,4 @@ function mostrarConteudo() {
         document.getElementById('content').style.display = 'none';
     }
 }
+

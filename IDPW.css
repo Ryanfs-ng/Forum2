@@ -497,6 +497,7 @@ footer{
     background-color: #52057b;
     display: block;
     text-align: center;
+
 }
 
 /* ******************************* */
@@ -717,23 +718,36 @@ navegaçao a:hover{
     flex: 80%;
 }
 
-.body{
+#body{
+    display: block;
+    background-color: #131415;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+
+#body2 .autores{
     display: flex;
     background-color: #131415;
     padding: 10px;
     margin-top: 5px;
 }
 
-.body .autores .username{
+#body .conteudo{
+    
+}
+
+
+#body .autores .username{
     font-size:20px;
 }
 
-.body .autores img{
+#body .autores img{
     max-width: 70px;
     max-height: 90px;
 }
 
-.body .conteudo .comentario button{
+#body .conteudo .comentario button{
     border: none;
     padding: 10px;
     font-weight: bolder;
@@ -744,6 +758,7 @@ navegaçao a:hover{
 }
 
 .comentario-topic button{
+    display: flex;
     border: none;
     padding: 10px;
     font-weight: bolder;
@@ -751,6 +766,7 @@ navegaçao a:hover{
     border-radius: 5px;
     box-shadow: 4px 6px rgb(100, 97, 97);
     cursor: pointer;
+
 }
 
 /* Comentarios */
