@@ -5,156 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fórum IDPW</title>
-    <link rel="stylesheet" href="IDPW.css">
+    <link rel="stylesheet" href="novapostagem.css">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/c0bc30fd70.js" crossorigin="anonymous"></script>
-
 </head>
-
-
 <body>
-    <header>
-        <div class="navbar">
-            <nav class="navegaçao esconder" id="navegaçao">
-                <ul class="nav-list">
-                    <!--Icone do X-->
-                    <span class="close-icon" onclick="showIconBar()">
-                        <i class="fa fa-close"></i>
-                    </span>
-                    <!--Icone do X-->
-                    <li class="nav-item">
-                        <a href="posts2.html">Postagens</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="posts.html">Tópicos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="sobredetail.html">Sobre</a>
-                    </li>
-                </ul>
-            </nav>
-            <a href="#" class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
-            <div class="logo"><a class="logo-link" href="index.html">Fórum IDPW </a></div>
-        </div>
-        <!--Caixa de pesquisa-->
-        <div class="caixa-pesquisa">
-            <div>
-                <select name="" id="">
-                    <option value="descriçoes">Comentários</option>
-                </select>
-                <input type="text" name="q" id="" placeholder="pesquisa ...">
-                <button><i class="fa fa-search"></i> </button>
-            </div>
-        </div>
-    </header>
+    <h1>Novo Tópico</h1>
+    <form id="topicForm">
+        <label for="tituloTopico">Título do Tópico:</label>
+        <input type="text" id="tituloTopico" name="tituloTopico">
+        <br>
+        <label for="conteudoTopico">Conteúdo do Tópico:</label>
+        <textarea id="conteudoTopico" name="conteudoTopico"></textarea>
+        <br>
+        <button type="button" onclick="criarTopico()">Criar Tópico</button>
+    </form>
 
-    <div class="container">
+    <div id="topicosExibidos"></div>
 
-        <!--Navegação-->
-        <div class="navegaçao">
-            <span><a href="index2.html">Fórum IDPW - Fóruns</a> >> <a href="posts-vagos.html"> JavaScript </a> >> <a href="#"> Postagem</a></span>
-        </div>
+    <script>
+        function criarTopico() {
+            // Obter os valores do formulário do tópico
+            var tituloTopico = document.getElementById('tituloTopico').value;
+            var conteudoTopico = document.getElementById('conteudoTopico').value;
 
-        <div class="postagem-criado">
-            <span class="titulo-postagem">
-                área do titulo
-            </span>
-            <div class="descriçao-postagem">
-                área da descrição   
-            </div>
-        </div>
-        <div class="comentario-topic">
-            <button onclick="mostrarComentarioTopic()">Comentar</button>
-            <div class="area-comentario-topic esconder" id="area-comentario-topic">
-                <textarea name="comentario" id="" placeholder="Comente aqui..."></textarea>
-                <input type="submit" name="" id="" value="Enviar">
-            </div>
-        </div>
-        
-<!--        <div class="topico-container">
-            <div class="head">
-                <div class="autores">Autor</div>
-                <div class="conteudo">Tópico: título do post (Lido 1245 vezes)</div>
-            </div>
+            // Criar um objeto para representar o tópico
+            var topico = {
+                titulo: tituloTopico,
+                conteudo: conteudoTopico,
+                posts: [] // Inicializar array para armazenar posts
+            };
 
-            <div class="body">
-                <div class="autores">
-                    <div class="username"><a href="#">Nome do Usário</a></div>
-                    <div>Função</div>
-                    <img src="https://cdn.pixabay.com/photo/2021/02/08/14/27/yoshi-5994957_1280.png">
-                    <div> Posts: <u>45</u></div>
-                </div>
+            // Armazenar o tópico no Local Storage
+            var topicos = JSON.parse(localStorage.getItem('topicos')) || [];
+            topicos.push(topico);
+            localStorage.setItem('topicos', JSON.stringify(topicos));
 
-                <div class="conteudo">
-                    Apenas um conteúdo aleatório aqui
-                    <br> Para ver como ficaria
-                    <br><br>
-                    Nada mais... 
-                    <br><br>
-                    <hr>
-                    Username
-                    <div class="comentario">
-                        <button onclick="mostrarComentario()">Responder</button>
-                    </div>
-                </div>
+            // Limpar formulário
+            document.getElementById('tituloTopico').value = '';
+            document.getElementById('conteudoTopico').value = '';
 
-            </div>
-        </div> -->
+            // Exibir os tópicos na página
+            exibirTopicos();
+        }
 
-        <!--Comentário input-->
-        <div class="area-comentario esconder" id="area-comentario">
-            <textarea name="comentario" id="" placeholder="Comente aqui..."></textarea>
-            <input type="submit" name="" id="" value="Enviar">
-        </div>
-        <!--Comentários-->
-        <div class="comentarios-container">
-            <div class="head">
-                <div class="autores">Autor</div>
-                <div class="conteudo">Comentários</div>
-            </div>
+        function exibirTopicos() {
+            // Obter os tópicos do Local Storage
+            var topicos = JSON.parse(localStorage.getItem('topicos')) || [];
 
-            <div class="body">
-                <div class="autores">
-                    <div class="OutroUsuario"><a href="#">Nome do Usário</a></div>
-                    <div>Função</div>
-                    <img src="https://cdn.pixabay.com/photo/2021/02/08/14/27/yoshi-5994957_1280.png">
-                    <div> Posts: <u>45</u></div>
-                </div>
+            // Exibir os tópicos em algum lugar da página
+            var topicosExibidos = document.getElementById('topicosExibidos');
+            topicosExibidos.innerHTML = "<h2>Tópicos Criados:</h2>";
 
-                <div class="conteudo">
-                    Apenas um comentário aleatório aqui
-                    <br> Para ver como ficaria
-                    <br><br>
-                    Nada mais... 
-                    <br><br>
-                    <hr>
-                    Username
-                 <!--<div class="comentario">
-                        <button onclick="mostrarResposta()">Responder</button>
-                    </div>
-                -->
-                </div>
-            </div>
-        </div>
+            topicos.forEach(function(topico, index) {
+                topicosExibidos.innerHTML += "<div><strong>Tópico " + (index + 1) + ":</strong> " + topico.titulo + "</div>";
+                topicosExibidos.innerHTML += "<p><strong>Conteúdo:</strong> " + topico.conteudo + "</p>";
 
-        <!--Resposta input-->
-        <div class="area-comentario esconder" id="area-resposta">
-            <textarea name="comentario" id="" placeholder="Responda aqui..."></textarea>
-            <input type="submit" name="" id="" value="Enviar">
-        </div>
-    </div>
+                // Exibir posts do tópico
+                if (topico.posts.length > 0) {
+                    topicosExibidos.innerHTML += "<h3>Posts:</h3>";
+                    topico.posts.forEach(function(post) {
+                        topicosExibidos.innerHTML += "<p><strong>Título:</strong> " + post.titulo + "</p>";
+                        topicosExibidos.innerHTML += "<p><strong>Conteúdo:</strong> " + post.conteudo + "</p>";
+                    });
+                }
 
-
-    <footer>
-        <span>&copy; &nbsp; Os Pecinhas | Todos os direitos reservados </span>
-    </footer>
-
-
-
-
-    <script src="principal.js"></script>
-    <script src="segurança.js"></script>
+                topicosExibidos.innerHTML += "<hr>";
+            });
+        }
+    </script>
+    
 </body>
-
 </html>
