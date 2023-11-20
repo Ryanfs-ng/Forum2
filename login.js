@@ -14,11 +14,19 @@ loginBtn.addEventListener('click', () => {
 
 const usuarios = [
     {
-        login: 'ApenasUmUsuário',
+        login: 'ApenasumUsuario',
         pass: '1234'
     },
     {
         login: 'ProfWeldes',
+        pass: '1234'
+    },
+    {
+        login: 'Calanguin',
+        pass: '1234'
+    },
+    {
+        login: 'ProfWeverson',
         pass: '1234'
     }
 ]

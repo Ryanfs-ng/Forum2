@@ -102,9 +102,9 @@ function areaPost() {
   // Itera sobre as postagens e as exibe
   postagensSalvas.forEach(function(postagem) {
       var postagemDiv = document.createElement('div');
-      postagemDiv.innerHTML = '<div id="body2"' + '<div class="autores">' + '<div class="OutroUsuario"><a href="#">ProfWeldes</a></div>' + 
+      postagemDiv.innerHTML ='<div id="body2"' + '<div class="autores">' + '<div class="OutroUsuario"><a href="#">ProfWeldes</a></div>' + 
       '<div>Função</div>' + '<img src="https://cdn.pixabay.com/photo/2021/02/08/14/27/yoshi-5994957_1280.png">' + 
-      '<div> Posts: <u>45</u></div><hr>' + '</div>' + '<div class="conteudo">' + postagem.comentario + '<br></div>' + '<div class="quebra"> <hr> Username </div></div></div>' 
+      '<div> Posts: <u>45</u></div><hr>' + '</div>' + '<div class="conteudo">' + postagem.comentario + '<br></div>' + '<div class="quebra"> <hr> Username <br><br></div></div></div>' 
       postagensDiv.appendChild(postagemDiv);
   });
 }
