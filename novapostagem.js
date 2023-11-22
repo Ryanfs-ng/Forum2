@@ -56,7 +56,7 @@ function salvarPost() {
   // Itera sobre as postagens e as exibe
   postagensSalvas.forEach(function(postagem) {
       var postagemDiv = document.createElement('div');
-      postagemDiv.innerHTML = '<div class="table-row2">' + '<div class="status"><i class="fa fa-fire"></i></div>' + '<div class="assunto-post"> <a href="posts3.html">' + postagem.titulo + '</a><br>' + postagem.conteudo + '<br><span>Começou por <b><a href="#">ProfWeldes</a></b></span></div>' + 
+      postagemDiv.innerHTML = '<div class="table-row2">' + '<div class="status"><i class="fa fa-fire"></i></div>' + '<div class="assunto-post"> <a href="posts3.html">' + postagem.titulo + '</a><br>' + postagem.conteudo + '<br><span>Começou por <b><a href="#">ProfWeverson</a></b></span></div>' + 
       '<div class="respostas"> 2 respostas <br> 125 Visualizações <i class="fa-solid fa-eye"></i></div>' + '<div class="ultima-resposta"> Oct12 2022<br>Por <b><a href="#">Usuário</a></b></div></div>';
       postagensDiv.appendChild(postagemDiv);
   });
@@ -102,7 +102,7 @@ function areaPost() {
   // Itera sobre as postagens e as exibe
   postagensSalvas.forEach(function(postagem) {
       var postagemDiv = document.createElement('div');
-      postagemDiv.innerHTML ='<div id="body2"' + '<div class="autores">' + '<div class="OutroUsuario"><a href="#">ProfWeldes</a></div>' + 
+      postagemDiv.innerHTML ='<div id="body2"' + '<div class="autores">' + '<div class="OutroUsuario"><a href="#">ProfWeverson</a></div>' + 
       '<div>Função</div>' + '<img src="https://cdn.pixabay.com/photo/2021/02/08/14/27/yoshi-5994957_1280.png">' + 
       '<div> Posts: <u>45</u></div><hr>' + '</div>' + '<div class="conteudo">' + postagem.comentario + '<br></div>' + '<div class="quebra"> <hr> Username <br><br></div></div></div>' 
       postagensDiv.appendChild(postagemDiv);
